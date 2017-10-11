@@ -1,0 +1,74 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Coming Soon</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,700italic' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+
+
+</head>
+<body>
+<div class="transy"></div>
+<div class="wrapper">
+	<div class="centered">
+		<div class="header">
+			<h1 id="logo">We-Build</h1>
+			<p class="line1">better place to build and deploy is coming soon</p>
+		</div>
+		
+		<div class="content">
+				<p>- We'll go live in -</p>
+				<div id="counter"></div>
+		</div>
+		
+		<div class="form">
+			<div class="mainform">
+				<p>- singup with email for early access -</p>
+				<div class="field"><input type="text" class="field" id="email" value="enter your email address"/></div>
+				<div class="submit"><input class="submit" type="button" value="Signup" id="signup" /></div>						
+			</div>
+		</div>
+		
+		<div class="social">
+		<p>
+			<a href="#" class="fa fa-facebook"> /sanjuwadhwani</a>
+			<a href="https://www.linkedin.com/in/sanjaykwadhwani/" target="_blank" class="fa fa-linkedin"> /sanjaykwadhwani</a>
+		</p>
+		</div>
+	</div>
+</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/1.6.3/jquery.countdown.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			/* Change the launch date according to the date you want to set.
+			Please take note that months ranges from 0-11 like an array setup. 
+			*/
+			var launchdate = new Date(2018, 01, 01);
+			$('#counter').countdown({
+				until: launchdate
+			});
+		});
+	</script>
+	
+	
+	<script type="text/javascript">
+		var placeholder = $("#email").val();
+		$("#email").keydown(function() {
+			if (this.value == placeholder) {
+				this.value = '';
+			}
+		}).blur(function() {
+			if (this.value == '') {
+				this.value = placeholder;
+			}
+		});
+	</script>
+
+</body>
+</html>

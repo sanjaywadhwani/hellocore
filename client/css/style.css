@@ -1,0 +1,313 @@
+/* Reset */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,dfn,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+
+
+
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+html{
+	background-color: #000;
+}
+
+
+
+
+body{
+margin:0;
+padding:0;
+color: #fff;
+position: relative;
+font-family: 'Roboto', sans-serif;
+text-align: center;
+}
+
+
+.transy{
+	width: 100%;
+height: 100%;
+float: left;
+bottom: 0%;
+position: absolute;
+z-index: -1;
+background: url(../images/background.jpg) no-repeat top center fixed; 
+opacity: 0.4;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+
+.wrapper{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;	
+	text-shadow: 1px 1.732px 2px rgba(0, 0, 0, 0.5);    
+}
+
+
+.centered{
+    display: inline-block;
+   }
+
+
+.header{
+	width: 60%;
+	padding: 0px 20%;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.header h1{
+	font-size: 50px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	color: #fff;
+}
+
+.header p.line1{
+	font-size: 20px;
+	font-weight: 300;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+
+
+.content{
+	width: 60%;
+	text-align: center;
+	padding:0 20%;
+	margin-bottom: 30px;
+	float: left;
+}
+
+.content p{
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+
+
+
+
+
+#counter {
+    margin-top: 10px;
+    width: 70%;
+    padding: 0 15%;
+    margin-bottom: 0px;
+    float: left;
+}
+
+.countdown_section {
+    color: #dadada;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 0px;
+    padding: 20px 0;
+    text-align: center;
+    width: 25%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+.countdown_section:first-child {
+    border-left: 0;
+}
+
+.countdown_amount {
+    color: #fff;
+    display: block;
+    font-size: 40px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+
+
+.form{
+	width: 40%;
+	padding: 0 30%;
+	margin-top: -20px;
+	background: url(../images/shadow-up.png) center top no-repeat;
+	float: left;
+}
+
+.mainform{
+	width: 100%;
+	padding: 30px 0 0 0;
+}
+
+.mainform p{
+		font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 25px;
+}
+
+.field{
+	width: 80%;
+	float: left;
+}
+
+.field input{
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	background: #fff;
+	border-top: none;
+	border-left: none;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	border: 2px solid #fff;
+	font-size: 16px;
+	color: #999;
+	float: left;
+	padding: 15px 5%;
+	width: 86%;
+}
+
+
+.submit{
+	width: 20%;
+	float: left;
+}
+
+
+
+
+.submit input{
+	border-radius: 5px;
+	background: none;
+	width: 100%;
+	float: left;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	cursor: pointer;
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 15px 0;
+	display: block;
+	border: 2px solid #fff;
+	
+	
+}
+
+.submit:hover input{
+	background: #fff;
+	color: #000;
+	
+}
+
+
+
+.social{
+	background: url(../images/shadow-up.png) center top no-repeat;
+	width: 80%;
+	float: left;
+	margin: 40px 0 0 0;
+	padding: 30px 10%;
+}
+
+.social p{
+	font-size: 13px;
+	letter-spacing: 2px;
+}
+
+.social p a{
+	color: #ddd;
+	font-weight: 700;
+	margin: 0 20px;
+	text-decoration: none;
+}
+
+.social p a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+
+
+@media only screen and (max-width: 1024px){
+
+
+.header, .content{
+	width: 80%;
+	padding: 0px 10%;
+}
+
+#counter{
+	width: 80%;
+	padding: 0 10%;
+
+}
+
+.form{
+	width: 60%;
+	padding: 0 20%;
+}
+
+}
+
+
+
+@media only screen and (max-width: 768px){
+
+.header, .content{
+	width: 90%;
+	padding: 0px 5%;
+}
+
+.header h1{
+	font-size: 40px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	color: #fff;
+}
+
+.header p.line1{
+	font-size: 18px;
+	font-weight: 300;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+
+#counter{
+	width: 96%;
+	padding: 0 2%;
+
+}
+
+.form{
+	width: 92%;
+	padding: 0 4%;
+}
+
+
+
+}
+
+
+
