@@ -34,6 +34,13 @@ namespace HelloCoreApi
                 app.UseDeveloperExceptionPage();
             }
 
+            //Enable CORS
+            app.UseCors(b =>
+                        b.AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowAnyOrigin()
+                        .AllowCredentials());
+
             app.UseMvc();
         }
     }
