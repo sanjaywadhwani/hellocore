@@ -10,7 +10,14 @@ namespace HelloCoreApi.Controllers
     [Route("api/[controller]")]
     public class SignUpController : Controller
     {
-        // POST api/values
+        // GET api/signup
+        [HttpGet]
+        public string Get()
+        {
+            return "Use post method to signup";
+        }
+
+        // POST api/signup
         [HttpPost]
         public SignUpResponse Post([FromBody]SignUpRequest signUpRequest)
         {
