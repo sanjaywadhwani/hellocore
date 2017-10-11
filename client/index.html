@@ -28,7 +28,8 @@
 		
 		<div class="form">
 			<div class="mainform">
-				<p>- singup with email for early access -</p>
+				<p>- signup with email for early access -</p>
+				<p id="message"></p>
 				<div class="field"><input type="text" class="field" id="email" value="enter your email address"/></div>
 				<div class="submit"><input class="submit" type="button" value="Signup" id="signup" /></div>						
 			</div>
@@ -53,6 +54,7 @@
 			$('#counter').countdown({
 				until: launchdate
 			});
+			$( "message" ).hide();
 		});
 	</script>
 	
@@ -79,9 +81,24 @@
 				url: "http://localhost:5000/api/signup",       
 				data: JSON.stringify({email: $("#email").val()}),               
 				dataType: "json",
-				success: function(json){
-					console.log(json);
+				success: function(response){
+										
 				}		
+			})
+			.done(function(response) {
+				$( "#message" ).show();
+				console.log(response);
+				$("#message").html(response.message);
+			})
+			.fail(function(err) {
+				$( "#message" ).show();
+				console.log(err);
+				$("#message").html(JSON.stringify(err));
+			})
+			.always(function() {
+				//alert( "complete" );
+				$("#message").fadeOut(4000);
+				$("#email").val(placeholder);
 			});
 		});
 	</script>
