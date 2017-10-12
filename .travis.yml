@@ -12,8 +12,12 @@ addons:
     - dotnet-hostfxr-1.0.1
     - dotnet-sharedframework-microsoft.netcore.app-1.0.5
 
-before_script:
-  - chmod a+x travis/build.sh
+sudo: required
+
+services:
+  - docker
 
 script:
-  - travis/build.sh
+- cd webapi/HelloCoreApi/HelloCoreApi/
+- dotnet restore && dotnet build
+- docker build -t aspnetapp:v1 .
