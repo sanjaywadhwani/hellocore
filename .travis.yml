@@ -12,5 +12,8 @@ addons:
     - dotnet-hostfxr-1.0.1
     - dotnet-sharedframework-microsoft.netcore.app-1.0.5
 
+install:
+- dotnet restore
+
 script:
-  - travis/build.sh
+- dotnet build
