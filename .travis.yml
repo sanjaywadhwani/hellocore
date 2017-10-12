@@ -13,7 +13,9 @@ addons:
     - dotnet-sharedframework-microsoft.netcore.app-1.0.5
 
 install:
+- cd webapi/HelloCoreApi/HelloCoreApi/
 - dotnet restore
 
 script:
+- cd webapi/HelloCoreApi/HelloCoreApi/
 - dotnet build
