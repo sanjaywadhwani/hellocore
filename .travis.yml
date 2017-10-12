@@ -12,7 +12,8 @@ addons:
     - dotnet-hostfxr-1.0.1
     - dotnet-sharedframework-microsoft.netcore.app-1.0.5
 
+before_script:
+  - chmod a+x ./travis/build.sh
 
 script:
-- cd webapi/HelloCoreApi/HelloCoreApi/
-- dotnet build && dotnet build
+  - ./travis/build.sh
