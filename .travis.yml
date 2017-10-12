@@ -20,4 +20,4 @@ services:
 script:
 - cd webapi/HelloCoreApi/HelloCoreApi/
 - dotnet restore && dotnet build
-- docker build -t aspnetapp:v1 .
+-  docker build -t lhellocore -t $REPO:$TAG -f Dockerfile .
