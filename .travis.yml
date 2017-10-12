@@ -13,7 +13,7 @@ addons:
     - dotnet-sharedframework-microsoft.netcore.app-1.0.5
 
 before_script:
-  - chmod a+x ./travis/build.sh
+  - chmod a+x travis/build.sh
 
 script:
-  - ./travis/build.sh
+  - travis/build.sh
