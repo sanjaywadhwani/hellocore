@@ -26,7 +26,7 @@ services:
 script:
     - cd webapi/HelloCoreApi/HelloCoreApi/
     - dotnet restore && dotnet build
-    - docker build -t hellocore:$(TRAVIS_COMMIT) -t hellocore:latest .
+    - docker build -t hellocore:$TRAVIS_COMMIT -t hellocore:latest .
     
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
