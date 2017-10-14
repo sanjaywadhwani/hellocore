@@ -24,6 +24,14 @@ services:
   - docker
 
 script:
-- cd webapi/HelloCoreApi/HelloCoreApi/
-- dotnet restore && dotnet build
-- docker build -t hellocore .
+    - cd webapi/HelloCoreApi/HelloCoreApi/
+    - dotnet restore && dotnet build
+    - docker build -t hellocore:$(TRAVIS_COMMIT) -t hellocore:latest .
+    - docker tag $(GIT_TAG) $(BUILD_TAG)
+    - docker tag $(GIT_TAG) $(LATEST_TAG)
+    
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="$DOCKER_USER" -p="$DOCKER_PASS";
+    docker push sanjaywadhwani/hellocoreui;
+    fi    
