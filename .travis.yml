@@ -26,12 +26,12 @@ services:
 script:
     - cd webapi/HelloCoreApi/HelloCoreApi/
     - dotnet restore && dotnet build
-    - docker build -t hellocore:$TRAVIS_COMMIT -t hellocore:latest .
+    - export REPO=sanjaywadhwani/hellocore
+    - docker build -t $REPO:$COMMIT .
     
 after_success:
-  - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+  - docker login -e $DOCKER_EMAIL -p $DOCKER_PASS
   - export REPO=sanjaywadhwani/hellocore
-  - docker build -t $REPO:$COMMIT .
   - docker tag $REPO:$COMMIT $REPO:$TRAVIS_BRANCH
   - docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
-  - docker push $REPO
+  - docker push $REPO:$COMMIT
