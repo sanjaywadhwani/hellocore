@@ -30,7 +30,7 @@ script:
     - docker build -t $REPO:$TRAVIS_COMMIT .
     
 after_success:
-  - docker login -e $DOCKER_EMAIL -p $DOCKER_PASS
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - export REPO=sanjaywadhwani/hellocore
   - docker tag $REPO:$TRAVIS_COMMIT $REPO:$TRAVIS_BRANCH
   - docker tag $REPO:$TRAVIS_COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
