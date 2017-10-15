@@ -1,0 +1,31 @@
+---
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: hellocoreapi
+  namespace: default
+  labels:
+    run: hellocoreapi
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: hellocoreapi
+  template:
+    metadata:
+      labels:
+        run: hellocoreapi
+    spec:
+      containers:
+      - name: hellocore
+        image: sanjaywadhwani/hellocore
+        ports:
+        - containerPort: 5000
+          protocol: TCP
+        volumeMounts:
+        - mountPath: "/app/hostshared"
+          name: mypd
+      volumes:
+      - name: mypd
+        persistentVolumeClaim:
+          claimName: hellocore-api-claim
