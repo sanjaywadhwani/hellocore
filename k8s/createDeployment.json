@@ -32,6 +32,20 @@
                 "protocol": "TCP"
               }
             ],
+            "livenessProbe": {
+              "httpGet": {
+                "path": "/api/signup",
+                "port": 5000,
+                "httpHeaders": [
+                  {
+                    "name": "X-Custom-Header",
+                    "value": "Works"
+                  }
+                ]
+              },
+              "initialDelaySeconds": 3,
+              "periodSeconds": 3
+            },
             "volumeMounts": [
               {
                 "mountPath": "/app/hostshared",
