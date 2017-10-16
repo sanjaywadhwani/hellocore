@@ -2,13 +2,9 @@ node {
     stage 'Checkout'
         checkout scm
 
-	stage 'use project folder'
+	stage 'use project folder && restore && build'
 		dir('webapi/HelloCoreApi/HelloCoreApi') {
+			bat 'dotnet restore'
+			bat 'dotnet build'
 		}
-		
-    stage 'restore'
-        bat 'dotnet restore'
-
-    stage 'build'
-        bat 'dotnet build'
 }
