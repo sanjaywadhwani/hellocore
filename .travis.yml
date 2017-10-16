@@ -6,7 +6,6 @@ dist: trusty
 branches:
   only:
     - master
-    - develop
 
 addons:
   apt:
